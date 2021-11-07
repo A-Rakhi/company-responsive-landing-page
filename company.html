@@ -1,0 +1,628 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+         'sm': '640px',
+           // => @media (min-width: 640px) { ... }
+
+          'md': '768px',
+            // => @media (min-width: 768px) { ... }
+
+          'lg': '1024px',
+           // => @media (min-width: 1024px) { ... }
+
+          'xl': '1280px',
+           // => @media (min-width: 1280px) { ... }
+
+           },
+           container: {
+             center: true,
+             padding: '2rem'
+           },
+
+          extend: {
+            colors: {
+              white:'#ffffff',
+              danger: "#F07566",
+              green: '#4DB282',
+              gray: {
+                default: "#333333",
+              },
+              red :{
+                dark:'#494949'
+              }
+            },
+          },
+
+          backgroundColor: (theme) => ({
+            white: "#ffffff",
+            danger: "#F07566",
+            red:{
+              dark:'#3F3836',
+            },
+            gray:{
+              light: '#E6EDF5',
+            },
+            yellow: '#FBD34B'
+          }),
+
+          borderColor: (theme) => ({
+            danger: "#f8c4bd",
+            white : "#ffffff",
+            gray :'#E5E7EB'
+          }),
+          fontFamily: {
+            display :['Hind Siliguri'],
+            body: [ 'Work Sans'],
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      h1,h2,h4 {
+        @apply text-[#333333] font-display;
+      }
+      .btn {
+        @apply font-bold py-3 px-5 rounded-lg;
+          }
+
+      .btn-danger{
+        @apply w-44 tracking-wider bg-danger text-base rounded-lg uppercase text-white;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="font-body text-gray-500">
+    <!-- nav-section -->
+    <section class="py-5 header-sec mb-5" style="background-image: url('https://i.ibb.co/dr5Xnx5/Group-10-1.png');background-repeat: no-repeat;background-size: cover;">
+        <header class="container flex items-center py-5 justify-between">
+          <div class="flex items-center space-x-16">
+            <h1
+              class="text-4xl font-bold font-display  tracking-wide"
+            >
+              CMP
+            </h1>
+              <nav class="hidden lg:block xl:block font-base">
+                <div >
+                  <ul class="flex space-x-10 text-gray-default">
+                    <li><a class="text-base tracking-wider cursor-pointer">About</a></li>
+                    <li><a class="text-base tracking-wider cursor-pointer">Portfolio</a>
+                    </li>
+                    <li>
+                      <a class="text-base tracking-wider cursor-pointer">Service</a>
+                    </li>
+                    <li>
+                      <a class="text-base tracking-wider">Blog</a>
+                    </li>
+                    <li>
+                      <a class="text-base tracking-wider">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>        
+          </div>
+
+             <div>
+              <button
+              class="hidden lg:block xl:block
+                py-2
+                px-6
+                text-danger
+                font-semibold
+                uppercase
+                border border-danger
+                rounded-lg
+              "
+            >
+              contact
+            </button>
+             </div>
+              
+          <div class="lg:hidden xl:hidden block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white bg-danger rounded-full p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+         </header>
+
+         <div class="container">
+        <div
+          class="
+            grid grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-2
+            xl:grid-cols-2
+            gap-4 xl:gap-24
+            py-20
+            justify-between
+            items-center
+          "
+        >
+          <div class="flex flex-col justify-between space-y-8">
+            <div class="flex items-center space-x-3 ">
+              <img class="w-3 h-3" src="https://i.ibb.co/Y8hN6sW/Oval-17.png" alt="Oval-17" border="0">
+              <h4 class="uppercase text-danger font-display font-base">Company</h4>
+            </div>
+            <div>
+                <h2 class="font-display lg:text-[72px] text-[56px] text-gray-default leading-tight max-w-sm">Creative
+                <span class="text-green">Marketing</span></h2>
+                <img class="lg:max-w-sm max-w-[16rem]" src="https://i.ibb.co/ySwjQL4/Bitmap-32.png" alt="name" border="0">
+              </div>
+              <p class="text-xl text-gray-default">The sky was cloudless and of a deep dark blue the spectacle before us was indeed sublime.</p>
+             <button
+              class="btn btn-danger mt-10">
+              Explore
+            </button>
+          </div>
+           
+           <div>
+            <img src="https://i.ibb.co/XXnp98s/Group-2.png" alt="Group-5" border="0">
+           </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT-SECTION -->
+
+   <section class="container md:mt-10 mt-2 py-10 md:py-16">
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20">
+       <div>
+        <img class="md:h-[500px] h-auto " src="https://i.ibb.co/m42gcHt/Group-3-1.png" alt="Group-3-1" border="0">
+       </div>
+       <div class="flex flex-col space-y-5">
+        <div class="flex items-center space-x-3 ">
+          <div class="w-3 h-3 rounded-full bg-danger"></div>
+          <h4 class="uppercase text-danger text-base">About</h4>
+        </div>
+          <h2  class=" leading-tight xl:text-[56px] lg:text-[56px] md:text-[56px] text-[40px] max-w-[250px] md:max-w-[350px] 
+            ">We Build 
+           PRO Business</h2>
+          <h4 class="py-1 font-display text-2xl ">Excited to work with customers</h4>
+          <div class="flex-col space-y-3 pb-2 ">
+            <div class="flex items-center space-x-2">
+              <img class="w-6 h-5" src="https://i.ibb.co/s6R0ZRC/Shape-8.png" alt="Oval-17" border="0">
+              <p class="  text-base">The sky was cloudless and of a deep </p>
+            </div>
+            <div class="flex items-center space-x-2 ">
+              <img class="w-6 h-5" src="https://i.ibb.co/s6R0ZRC/Shape-8.png" alt="Oval-17" border="0">
+              <p class=" text-base">Spectacle before us was indeed  </p>
+            </div>
+            <div class="flex items-center space-x-2 ">
+              <img class="w-6 h-5" src="https://i.ibb.co/s6R0ZRC/Shape-8.png" alt="Oval-17" border="0">
+              <p class=" text-base">Cloudless and of a deep dark  </p>
+            </div>    
+          </div>
+        <button
+          class="btn btn-danger">
+        Learn More  </button>
+      </div>
+     </div> 
+   </section>
+
+
+   <section class="container">
+     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-3 xl:gap-6 items-center justify-content">
+        <div class="border border-gray rounded-lg py-5 px-5 md:px-2 lg:px-4 xl:px-5  items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M63.6318 18.834L50.2427 0.758789C49.8887 0.281738 49.3301 0 48.7358 0C48.1416 0 47.5825 0.281738 47.2295 0.758789L33.8403 18.834C33.4189 19.4028 33.354 20.1611 33.6729 20.7935C33.9912 21.4258 34.6392 21.8252 35.3472 21.8252H40.1665V30.8877C39.2227 30.4014 38.1538 30.125 37.0205 30.125H33.6733C29.8711 30.125 26.7778 33.2183 26.7778 37.0205V40.9292C25.834 40.4429 24.7647 40.1665 23.6318 40.1665H20.2847C16.4824 40.1665 13.3892 43.2603 13.3892 47.0625V50.9707C12.4448 50.4849 11.376 50.208 10.2432 50.208H6.89551C3.09326 50.208 0 53.3018 0 57.104V62.125C0 63.1606 0.839356 64 1.875 64H55.4302C56.4658 64 57.3052 63.1606 57.3052 62.125V21.8252H62.125C62.833 21.8252 63.481 21.4258 63.7993 20.7935C64.1182 20.1611 64.0532 19.4028 63.6318 18.834ZM3.75 57.104C3.75 55.3696 5.16113 53.958 6.89551 53.958H10.2427C11.9775 53.958 13.3887 55.3696 13.3887 57.104V60.25H3.75V57.104ZM17.1387 47.0625V57.104V60.25H26.7773V47.0625C26.7773 45.3276 25.3662 43.9165 23.6318 43.9165H20.2847C18.5498 43.9165 17.1387 45.3276 17.1387 47.0625ZM30.5278 47.0625V37.0205C30.5278 35.2861 31.939 33.875 33.6733 33.875H37.0205C38.7549 33.875 40.1665 35.2861 40.1665 37.0205V60.25H30.5278V47.0625ZM53.5552 19.9502C53.5552 18.9146 54.3945 18.0752 55.4302 18.0752H58.4028L48.7358 5.0249L39.0693 18.0752H42.0415C43.0767 18.0752 43.9165 18.9146 43.9165 19.9502V60.25H53.5552V19.9502Z" fill="#4DB282"/>
+            </svg>
+          <div class="pt-20">
+            <h4 class=" uppercase">Consulting</h4>
+            <p class="lg:leading-loose md:leading-relaxed leading-loose pt-3">The sky was cloudless and of a deep dark blue the spectacle before.</p>
+          </div>
+        </div>
+        <div class="border border-gray rounded-lg py-5 px-5 md:px-2 lg:px-4 xl:px-5  items-center">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M32 0C20.9995 0 12.0498 8.94971 12.0498 19.9502C12.0498 26.2812 15.0347 32.189 20.083 35.9507V37.6167C18.8535 38.6973 18.0752 40.2798 18.0752 42.0415C18.0752 43.5928 18.6787 45.0054 19.6621 46.0586C18.6787 47.1118 18.0752 48.5239 18.0752 50.0752C18.0752 52.7178 19.8237 54.9595 22.2251 55.7036C22.9976 60.4028 27.0854 64 32 64C36.9146 64 41.0029 60.4028 41.7754 55.7036C44.1763 54.959 45.9253 52.7178 45.9253 50.0747C45.9253 48.5239 45.3218 47.1113 44.3384 46.0581C45.3218 45.0049 45.9253 43.5928 45.9253 42.0415C45.9253 40.2798 45.147 38.6973 43.917 37.6162V35.9507C48.9653 32.189 51.9502 26.2812 51.9502 19.9502C51.9502 8.94971 43.0005 0 32 0ZM40.0337 39.8999C41.2144 39.8999 42.1753 40.8608 42.1753 42.0415C42.1753 43.2227 41.2144 44.1836 40.0337 44.1836H23.9668C22.7856 44.1836 21.8247 43.2227 21.8247 42.0415C21.8247 40.8608 22.7856 39.8999 23.9668 39.8999H40.0337ZM26.1333 55.9668C26.9287 58.4482 29.2578 60.25 32 60.25C34.7422 60.25 37.0718 58.4487 37.8667 55.9668H26.1333ZM40.0337 52.2168H23.9668C22.7856 52.2168 21.8247 51.2559 21.8247 50.0752C21.8247 48.894 22.7856 47.9336 23.9668 47.9336H40.0337C41.2144 47.9336 42.1753 48.894 42.1753 50.0752C42.1753 51.2559 41.2144 52.2168 40.0337 52.2168ZM40.167 34.9805C40.167 34.355 40.479 33.7705 40.999 33.4224C45.5078 30.4038 48.2002 25.3677 48.2002 19.9502C48.2002 11.0171 40.9326 3.75 32 3.75C23.0674 3.75 15.7998 11.0171 15.7998 19.9502C15.7998 25.3677 18.4922 30.4038 23.001 33.4224C23.521 33.7705 23.833 34.355 23.833 34.9805V36.1533L23.8772 36.1521H23.8774C23.9071 36.1513 23.9368 36.1504 23.9668 36.1504H26.1084V28.7603L23.416 26.0679C22.6836 25.3354 22.6836 24.1484 23.416 23.416C24.1484 22.6841 25.3354 22.6841 26.0674 23.416L29.3091 26.6577C29.6606 27.0093 29.8584 27.4863 29.8584 27.9834V36.1499H34.1416V27.9834C34.1416 27.4858 34.3394 27.0093 34.6909 26.6577L37.9326 23.416C38.6646 22.6836 39.8521 22.6836 40.584 23.416C41.3164 24.1484 41.3164 25.3354 40.584 26.0679L37.8916 28.7603V36.1499H40.0337C40.0615 36.1499 40.0892 36.1509 40.117 36.1518C40.1337 36.1524 40.1503 36.153 40.167 36.1533V34.9805ZM7.7666 19.9502C7.7666 18.9146 6.92725 18.0752 5.8916 18.0752H1.875C0.839355 18.0752 0 18.9146 0 19.9502C0 20.9854 0.839355 21.8252 1.875 21.8252H5.8916C6.92725 21.8252 7.7666 20.9854 7.7666 19.9502ZM58.1084 18.0752H62.125C63.1606 18.0752 64 18.9146 64 19.9502C64 20.9854 63.1606 21.8252 62.125 21.8252H58.1084C57.0732 21.8252 56.2334 20.9854 56.2334 19.9502C56.2334 18.9146 57.0732 18.0752 58.1084 18.0752ZM8.45166 31.3804L4.97314 33.3887C4.07666 33.9067 3.76953 35.0532 4.28711 35.9502C4.63428 36.5518 5.26465 36.8877 5.9126 36.8877C6.23047 36.8877 6.55322 36.8071 6.84814 36.6362L10.3267 34.6284C11.2236 34.1104 11.5308 32.9639 11.0132 32.0669C10.4956 31.1699 9.34863 30.8628 8.45166 31.3804ZM55.5479 8.52002C55.2524 8.69043 54.9302 8.77148 54.6123 8.77148C53.9644 8.77148 53.334 8.43506 52.9868 7.8335C52.4688 6.93701 52.7764 5.79004 53.6729 5.27246L57.1519 3.26416C58.0483 2.74609 59.1948 3.05322 59.7129 3.9502C60.231 4.84717 59.9233 5.99365 59.0269 6.51123L55.5479 8.52002ZM59.0264 33.3887L55.5479 31.3809C54.6509 30.8633 53.5039 31.1704 52.9863 32.0674C52.4688 32.9639 52.7764 34.1108 53.6729 34.6284L57.1519 36.6362C57.4468 36.8066 57.769 36.8877 58.0874 36.8877C58.7354 36.8877 59.3657 36.5513 59.7129 35.9497C60.231 35.0532 59.9233 33.9062 59.0264 33.3887ZM6.84863 3.26416L10.3271 5.27197C11.2236 5.79004 11.5312 6.93652 11.0137 7.8335C10.666 8.43506 10.0361 8.77148 9.3877 8.77148C9.06982 8.77148 8.74756 8.69043 8.45215 8.52002L4.97363 6.51172C4.07715 5.99414 3.76953 4.84766 4.2876 3.95068C4.80518 3.05371 5.95166 2.74609 6.84863 3.26416Z" fill="#4DB282"/>
+              </svg>           
+          </div>
+             <div class="pt-20 ">
+            <h4 class="font-display uppercase">Planning</h4>
+            <p class="lg:leading-loose md:leading-relaxed leading-loose pt-3 ">Apparently we had reached a great height in the atmosphere.</p>
+          </div>
+        </div>
+        <div class="border border-gray rounded-lg  py-5 px-5 md:px-2 lg:px-4 xl:px-5  items-center">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M63.4507 60.7993L55.9141 53.2622C61.1406 47.3984 64 39.9194 64 32C64 25.8394 62.2666 19.9194 58.9741 14.7783L63.4507 10.3018C63.9102 9.8418 64.0991 9.17725 63.9497 8.54492C63.8003 7.9126 63.3345 7.40234 62.7178 7.19727L58.2822 5.71826L56.8037 1.28223C56.5977 0.666016 56.0879 0.199707 55.4556 0.050293C54.8232 -0.0986328 54.1587 0.0898437 53.6987 0.549316L49.2222 5.02637C44.0806 1.73389 38.1602 0 32 0C23.4526 0 15.4165 3.32861 9.37256 9.37256C3.32861 15.4165 0 23.4526 0 32C0 39.9194 2.85938 47.3984 8.08643 53.2622L0.549316 60.7993C-0.183105 61.5312 -0.183105 62.7188 0.549316 63.4507C0.915527 63.8169 1.39502 64 1.875 64C2.35498 64 2.83496 63.8169 3.20068 63.4507L10.7378 55.9136C16.6016 61.1411 24.0806 64 32 64C39.9194 64 47.3984 61.1406 53.2622 55.9136L60.7993 63.4507C61.1655 63.8169 61.645 64 62.125 64C62.605 64 63.085 63.8169 63.4507 63.4507C64.1831 62.7188 64.1831 61.5317 63.4507 60.7993ZM54.2056 5.34619L55.021 7.79297C55.2075 8.35303 55.647 8.79248 56.2065 8.979L58.6538 9.79492L54.5181 13.9307L51.1816 12.8184L50.0693 9.48193L54.2056 5.34619ZM32 40.1665C36.5029 40.1665 40.167 36.5029 40.167 32C40.167 30.4263 39.7183 28.9561 38.9438 27.708L33.3257 33.3257C32.96 33.6919 32.48 33.875 32 33.875C31.52 33.875 31.04 33.6919 30.6743 33.3257C29.9419 32.5938 29.9419 31.4067 30.6743 30.6743L36.292 25.0562C35.0439 24.2817 33.5737 23.8335 32 23.8335C27.4971 23.8335 23.8335 27.4971 23.8335 32C23.8335 36.5029 27.4971 40.1665 32 40.1665ZM38.9922 22.3564C37.0269 20.9277 34.6104 20.0835 32 20.0835C25.4292 20.0835 20.0835 25.4292 20.0835 32C20.0835 38.5708 25.4292 43.9165 32 43.9165C38.5708 43.9165 43.917 38.5708 43.917 32C43.917 29.3896 43.0728 26.9736 41.6436 25.0078L46.1265 20.5254C48.6768 23.6592 50.2085 27.6538 50.2085 32C50.2085 42.04 42.04 50.2085 32 50.2085C21.96 50.2085 13.792 42.04 13.792 32C13.792 21.96 21.96 13.7915 32 13.7915C36.3462 13.7915 40.3408 15.3232 43.4751 17.8735L38.9922 22.3564ZM32 3.75C16.4229 3.75 3.75 16.4229 3.75 32C3.75 47.5771 16.4229 60.25 32 60.25C47.5771 60.25 60.25 47.5771 60.25 32C60.25 26.8374 58.8726 21.8667 56.248 17.4946C55.9038 17.7915 55.4688 17.9512 55.0244 17.9512C54.8257 17.9512 54.626 17.9194 54.4316 17.855L50.2056 16.4458L48.7881 17.8633C52.0122 21.686 53.9585 26.6196 53.9585 32C53.9585 44.1079 44.1079 53.9585 32 53.9585C19.8921 53.9585 10.042 44.1079 10.042 32C10.042 19.8921 19.8921 10.0415 32 10.0415C37.3804 10.0415 42.314 11.9878 46.1367 15.2119L47.5542 13.7944L46.145 9.56885C45.9351 8.93896 46.0747 8.24902 46.5039 7.75146C42.1323 5.12744 37.1621 3.75 32 3.75Z" fill="#4DB282"/>
+              </svg>   
+          </div>
+           <div class="pt-20">
+            <h4 class="uppercase">Support</h4>
+            <p class="lg:leading-loose md:leading-relaxed leading-loose pt-3 ">By the same illusion which lifts the horizon of the sea to the level.</p>
+          </div>
+        </div> 
+        <div class="border border-gray rounded-lg  py-5 px-5 md:px-2 lg:px-4 xl:px-5 items-center">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="64" viewBox="0 0 56 64" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M29.8567 0C15.5478 0 3.88684 11.4795 3.71532 25.6567L0.603013 34.6758C-0.251608 37.1533 -0.195583 39.334 0.756834 40.6592C1.32789 41.4531 2.20905 41.9082 3.17523 41.9082H3.71336V45.0542C3.71336 48.8564 6.82714 51.9497 10.654 51.9497C12.4001 51.9497 13.8204 53.3613 13.8204 55.0957V57.104C13.8204 60.9062 16.9337 64 20.7606 64H34.9102C38.7371 64 41.8508 60.9062 41.8508 57.104V49.0562C45.8591 46.998 49.2638 43.9473 51.748 40.1758C54.5296 35.9526 56 31.0425 56 25.9746C56 11.6523 44.2722 0 29.8567 0ZM39.1759 46.1812C38.5056 46.4868 38.0761 47.1528 38.0761 47.8853V57.104C38.0761 58.8389 36.6558 60.25 34.9102 60.25H20.7606C19.0149 60.25 17.5947 58.8389 17.5947 57.104V55.0957C17.5947 51.2935 14.4809 48.2002 10.654 48.2002C8.90792 48.2002 7.48764 46.7886 7.48764 45.0542V40.0332C7.48764 38.998 6.64285 38.1582 5.6005 38.1582H3.78462C3.75267 37.7397 3.79789 36.981 4.17335 35.8921L7.38592 26.583C7.45324 26.3872 7.48764 26.1816 7.48764 25.9751C7.48764 13.7202 17.5224 3.75 29.8567 3.75C42.1909 3.75 52.2257 13.7202 52.2257 25.9751C52.2257 34.6338 47.1034 42.5654 39.1759 46.1812ZM45.8011 22.2388C45.5789 21.5601 44.9882 21.0654 44.2776 20.9629L35.4827 19.6934L31.5492 11.7749C31.2312 11.1348 30.5752 10.7295 29.8567 10.7295C29.1382 10.7295 28.4826 11.1348 28.1646 11.7749L24.2311 19.6934L15.4363 20.9629C14.7251 21.0654 14.1349 21.5601 13.9128 22.2388C13.6906 22.918 13.8759 23.6631 14.39 24.1611L20.7542 30.3252L19.2518 39.0283C19.1304 39.7319 19.4214 40.4429 20.0027 40.8623C20.5836 41.2817 21.3542 41.3369 21.9901 41.0049L29.8567 36.896L37.7232 41.0049C37.9994 41.1494 38.3012 41.2207 38.6014 41.2207H38.6088C39.6487 41.2178 40.491 40.3794 40.491 39.3457C40.491 39.2017 40.4748 39.0615 40.4438 38.9268L38.9592 30.3252L45.3234 24.1611C45.8379 23.6631 46.0227 22.918 45.8011 22.2388ZM35.6139 28.3276C35.1692 28.7583 34.9662 29.3789 35.0714 29.9873L36.0951 35.918L30.7349 33.1177C30.4597 32.9741 30.1584 32.9023 29.8567 32.9023C29.5554 32.9023 29.2537 32.9741 28.9785 33.1177L23.6183 35.918L24.642 29.9873C24.7471 29.3789 24.5442 28.7583 24.0994 28.3276L19.7629 24.1279L25.7556 23.2627C26.3704 23.1738 26.9016 22.7905 27.1768 22.2368L29.8567 16.8413L32.537 22.2368C32.8122 22.7905 33.3435 23.1738 33.9583 23.2627L39.9509 24.1279L35.6139 28.3276Z" fill="#4DB282"/>
+              </svg>            
+          </div>
+          <div class="pt-20">
+            <h4 class=" uppercase">Cooperation</h4>
+            <p class="lg:leading-loose md:leading-relaxed leading-loose pt-3  ">Spectator on a hillside, the sable cloud beneath was dished out.</p>
+          </div>
+        </div> 
+          </div>
+   </section>
+
+   <!-- FEATURE-SECTION -->
+   <section class="container md:mt-36 mt-28">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+     
+      <div class="flex flex-col space-y-4">
+       <div class="flex items-center space-x-3 ">
+        <div class="w-3 h-3 rounded-full bg-danger"></div>
+        <h4 class="uppercase text-danger font-display text-base">features</h4>
+       </div>
+         <h2  class=" leading-tight xl:text-[56px] lg:text-[56px] text-[40px] max-w-sm lg:max-w-lg font-display ">Smart Complex 
+          Solutions</h2>
+          <p class="text-base leading-loose text-gray-default max-w-md xl:max-w-2xl">Stars had ceased to twinkle the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out.</p>
+          <div class="shadow-xl rounded-lg p-7">
+            <div class="flex space-x-3">
+              <img class="w-6 h-5" src="https://i.ibb.co/3STt8YZ/Shape-9.png" alt="Oval-17" border="0">
+              <h4 class="font-display uppercase">Modern Technology</h4>
+            </div>
+            <p class=" pt-3 ">The sky was cloudless and of a deep dark blue the spectacle before us was indeed sublime.</p>
+       </div>
+       </div>
+
+     <div>
+      <img class="md:h-[500px] h-auto " src="https://i.ibb.co/wYHk6fv/Group-4-1.png" alt="Group-3-1" border="0">
+     </div>
+    </div> 
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="container">
+    <div>
+      <div class="flex flex-col space-y-6 items-center text-center py-0 md:py-10 md:mt-36 mt-24">
+        <div class="flex items-center space-x-3 ">
+          <img class="w-3 h-3" src="https://i.ibb.co/Y8hN6sW/Oval-17.png" alt="Oval-17" border="0">
+          <h4 class="uppercase text-danger font-display text-base">Portfolio</h4>
+        </div>
+         <h2  class=" leading-tight xl:text-[56px] lg:text-[56px] text-[40px] max-w-sm lg:max-w-lg ">Company classes</h2>
+         <p class="md:max-w-3xl max-w-xl leading-loose">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle the same illusion which lifts the horizon of the sea.</p>
+         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center pt-6">
+          <div class="flex flex-col space-y-3 text-center">
+           <img class="" src="https://i.ibb.co/JHV6QYF/Group-11-1.png" alt="Shape-5" border="0">
+           <div class="pt-2">
+            <h4 class="font-display uppercase">Face of Mars</h4>
+            <p class="leading-loose">Will be a rare experience</p>
+           </div>
+        </div>
+        <div class="flex flex-col space-y-3 text-center">
+          <img class="" src="https://i.ibb.co/F7gMQry/Group-13-1.png" alt="Shape-5" border="0">
+          <div class="pt-2">
+           <h4 class="font-display uppercase">Heavenly Bodies</h4>
+           <p class="leading-loose">Tour round the world should form</p>
+          </div>
+       </div> 
+       <div class="flex flex-col space-y-3 text-center">
+        <img class="" src="https://i.ibb.co/fkymW9D/Group-12-1.png" alt="Shape-5" border="0">
+        <div class="pt-2">
+         <h4 class="font-display uppercase">Liberal Education</h4>
+         <p class="leading-loose">Truly it was a great journey</p>
+        </div>
+     </div>
+     <div class="flex flex-col space-y-3 text-center">
+      <img class="" src="https://i.ibb.co/prWFTBd/Group-14-1.png" alt="Shape-5" border="0">
+      <div class="pt-2">
+       <h4 class="font-display uppercase">Though the Gravity</h4>
+       <p class="leading-loose">Daily classes he no longer collapsed</p>
+      </div>
+       </div>        
+      </div>
+      <div class="pt-20 text-center">
+        <button class="px-8 py-2 rounded-md uppercase font-display text-danger border border-danger ">Browse all</button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- icon -->
+
+  <section class="container px-3 md:px-2 md:py-32 py-10">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-12">
+      <img class="h-10" src="https://i.ibb.co/YDYqczv/Bitmap-36.png" alt="Bitmap-36" border="0">
+      <img class="h-10" src="https://i.ibb.co/x8S6VSx/Bitmap-37.png" alt="Bitmap-36" border="0">
+      <img class="h-10" src="https://i.ibb.co/KyQRjD6/Bitmap-53.png" alt="Bitmap-36" border="0">
+      <img class="h-10" src="https://i.ibb.co/kM03x7T/Bitmap-54.png" alt="Bitmap-36" border="0">
+      <img class="h-10" src="https://i.ibb.co/XVy3kpc/Bitmap-55.png" alt="Bitmap-36" border="0">
+      <img class="h-10" src="https://i.ibb.co/MZQvFgC/Bitmap-56.png" alt="Bitmap-36" border="0">
+
+    </div>
+  </section>
+
+     <!-- Service-SECTION -->
+     <section class="container  my-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:mb-0 mb-10">
+       
+        <div class="flex flex-col space-y-5">
+         <div class="flex items-center space-x-5">
+          <div class="w-3 h-3 rounded-full bg-danger"></div>
+           <h4 class="uppercase text-danger font-display text-base">Service</h4>
+         </div>
+           <h2  class=" leading-tight lg:text-[56px] text-[40px] font-display tracking-tight md:max-w-lg max-w-sm">
+            Marketing and
+            Creative Consulting</h2>
+            <p class="text-base leading-loose text-gray-default max-w-lg">
+              Distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-1">
+              <div class="flex space-x-4">
+                <img class="w-14 h-14" src="https://i.ibb.co/w7JTqVW/Group-5-1.png" alt="Oval-17" border="0">
+                <div class="">
+                  <h4 class="font-display uppercase text-[40px]">42+</h4>
+                  <p class=" pt-1">Clients</p>
+                </div>
+              </div> 
+              <div class="flex space-x-4">
+                <img class="w-14 h-14" src="https://i.ibb.co/dPdpTdQ/Group-6.png" alt="Oval-17" border="0">
+                <div class="">
+                  <h4 class="font-display uppercase text-[40px]">73%</h4>
+                  <p class=" pt-1">Succeful</p>
+                </div>
+              </div>
+            </div>  
+           
+         </div>
+  
+       <div>
+        <img class="md:h-[500px] h-auto " src="https://i.ibb.co/wYHk6fv/Group-4-1.png" alt="Group-3-1" border="0">
+       </div>
+      </div> 
+    </section>
+
+    <!-- Strategy -->
+    <section class=" bg-danger mt-32">
+      <div class="container ">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:gap-14 md:gap-20 
+        lg:gap-2  items-center relative md:-top-0 -top-24 md:py-10 lg:py-20 py-5 ">
+          <div class="relative">
+            <img class="md:absolute md:-top-64 z-1 " src="https://i.ibb.co/7K4z3Ww/Group-8-1.png" alt="Group-8-1" border="0">
+          </div>
+          <div class="md:pt-0 pt-10">
+            <h2 class="font-display text-white lg:text-[56px] text-[40px] md:text-[36px] leading-tight  tracking-tighter md:max-w-full lg:max-w-lg max-w-sm">Strategy, technology
+              and design</h2>
+              <p class="text-white pt-5 max-w-[380px]">Apparently we had reached a great height in the atmosphere, for the sky was a dead black.</p>
+          </div>
+  
+        </div>
+  
+      </div>
+     
+    </section>
+
+
+      <!-- TEAM -->
+  <section class="container md:mt-24 mt-10 py-10 ">
+      <div class="flex flex-col space-y-6 items-center text-center py-0 md:py-10">
+        <div class="flex items-center space-x-3 ">
+          <div class="w-3 h-3 rounded-full bg-danger"></div>
+          <h4 class="uppercase text-danger font-display text-base">team</h4>
+        </div>
+         <h2  class=" leading-tight xl:text-[56px] lg:text-[56px] text-[40px] max-w-sm lg:max-w-lg">Strong Members</h2>
+         <p class="md:max-w-3xl max-w-xl leading-loose">Formed a great hindrance to my speed, I resolved, contrary to my first intention, to make the being of a gigantic stature that is to say, about eight feet in height.</p>
+         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 lg:gap-16 items-center pt-8 sm:pt-14">
+       <div class="relative border border-gray rounded-lg px-3 flex flex-col space-y-3">
+        <img class="relative -top-8 sm:-top-14 " src="https://i.ibb.co/Y7b32Pp/Bitmap-57.png" alt="Shape-5" border="0">
+        <div class="px-3 pb-3">
+         <h4 class=" uppercase">Ingo Schimpff</h4>
+         <p class="leading-loose">Manager</p>
+        </div>
+       </div>
+        <div class=" border border-gray rounded-lg  px-3 flex flex-col space-y-3">
+         <img class="relative -top-8  sm:-top-14" src="https://i.ibb.co/6FKgxR0/Bitmap-58.png" alt="Shape-5" border="0">
+         <div class="px-3 pb-3">
+          <h4 class=" uppercase">Gauthier Drewitt </h4>
+          <p class="leading-loose">Director</p>
+         </div>
+         </div>
+
+       <div class=" border border-gray rounded-lg px-3 flex flex-col space-y-3">
+      <img class="relative -top-8 sm:-top-14" src="https://i.ibb.co/C5WWHk3/Bitmap-59.png" alt="Shape-5" border="0">
+        <div class="px-3 pb-3">
+       <h4 class=" uppercase">Winny Rearie </h4>
+       <p class="leading-loose">Manager</p>
+       </div>
+       </div>
+       
+      </div>      
+    </div>
+    <div>
+      <img  class="items-center py-16 mx-auto" src="https://i.ibb.co/xjkkmnx/pins.png">
+    </div>
+
+  </section>
+
+
+  <!-- Testimonials -->
+  <section class="container my-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:gap-20 md:gap-16 gap-10 items-center">
+      <div><img class="h-auto md:h-[477px]" src="https://i.ibb.co/C60Ky75/Group-9-1.png" alt="Group-9-1" border="0"></div>
+      <div class="flex-col space-y-2">
+        <div class="flex items-center space-x-3 ">
+          <div class="w-3 h-3 rounded-full bg-danger"></div>
+          <h4 class="uppercase text-danger text-base">Testimonials</h4>
+        </div>
+        <h2 class=" text-[40px] lg:text-[56px]">Reviews</h2>
+
+        <div class="relative shadow-lg rounded-sm p-7">
+          <img class="absolute -top-5 right-5 h-12 w-12" src="https://i.ibb.co/qFzCWqc/Shape-7.png">
+          <div class="flex-col space-y-2">
+            <p class="leading-loose max-w-md md:leading-normal">
+              "The sky was cloudless and of a deep dark blue the spectacle before us was indeed sublime sky was cloudless and of a deep dark."
+            </p>
+            <h4 class="  text-2xl pt-2">Jaroslav Brabec</h4>
+            <p class="  text-sm Microsoft">Microsoft</p>
+          </div>
+          
+        </div>
+
+        <img class="pt-6" src="https://i.ibb.co/16R8Pqk/arrows.png" alt="arrows" border="0">
+
+      </div>
+    </div>
+  </section>
+
+<!-- 
+  Kickstart 
+Your Next 
+Project -->
+
+     <section class="container rounded-lg bg-danger md:mt-40 mt-10 mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-8 xl:gap-10 md:p-20 p-10">
+       <div>
+      <h2 class=" text-white text-[56px] leading-none max-w-xs">Kickstart 
+        Your Next 
+        Project</h2>
+        <button class="mt-10 text-gray-default rounded-lg uppercase bg-yellow px-8 py-2 font-display ">contact us</button>
+         </div>
+      <div class="relative flex-col justify-between pb-6 sm:space-y-1 md:space-y-8 lg:space-y-10 xl:space-y-20">
+        <p class="text-white leading-loose ">I shall see the face of Mars, anyhow, and that will be a rare experience. It seems to me that a view of the heavenly bodies through a fine telescope, as well as a tour round the world, should form a part of a liberal education.</p>
+        <img class="absolute md:-left-24 -left-0 " src="https://i.ibb.co/99LMgtF/Bitmap-60.png" alt="Bitmap-60" border="0">
+      </div>
+       </div>
+     </section>
+
+     <!-- NEWS -->
+     <section class="container  lg:my-36 sm:my-28 my-10">
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-24 gap-10">
+         <div>
+           <h2 class=" text-[40px] tracking-tighter">Company Newsletter</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
+            <input class="col-span-2 py-3 border rounded-lg border-gray pl-5" type="text" placeholder="Your Email">
+            <button class=" rounded-lg py-3 md:w-full w-40 uppercase bg-danger text-white font-display tracking-wide">subscribe</button>
+          </div>
+       </div>
+     </section>
+
+
+     <!-- Latest articles -->
+     <section class="container mt-20">
+       <div class="">
+        <div class="flex flex-col space-y-6 items-center text-center py-8 md:py-10">
+          <div class="flex items-center space-x-3 ">
+            <div class="w-3 h-3 rounded-full bg-danger"></div>
+            <h4 class="uppercase text-danger text-base">Latest articles</h4>
+          </div>
+           <h2  class=" leading-tight xl:text-[56px] lg:text-[56px] text-[40px] max-w-sm lg:max-w-lg ">Check Our Insights</h2>
+           <p class="md:max-w-3xl max-w-xl leading-loose">See the face of Mars, anyhow, and that will be a rare experience seems to me that a view of the heavenly bodies through a fine telescope, as well as a tour round the world.</p>
+           </div>
+
+           <div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 border border-gray rounded-sm p-4 items-center">
+              <div><img src="https://i.ibb.co/mJJS15J/Bitmap-61.png" alt="Bitmap-61" border="0"></div>
+              <div>       
+                    <h2 class="text-[40px] tracking-tighter leading-none max-w-md">What looked like a small 
+                      patch of purple grass </h2>
+                      <p class="text-xl pt-8 md:pb-0 pb-2 max-w-lg text-gray-default">Truly it was a great journey, and in it I met with many, whom to know was to love.</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 my-10 items-center p-4">
+              <div class="border border-gray rounded-lg px-3 flex flex-col space-y-3 p-4">
+                <img class="" src="https://i.ibb.co/G3rBzHh/Bitmap-62.png" alt="Shape-5" border="0">
+                 <h4 class=" text-2xl p-2">Above five feet square, was moving across</h4>
+               </div>
+               <div class="border border-gray rounded-lg px-3 flex flex-col space-y-3 p-4">
+                <img class="" src="https://i.ibb.co/XxrqHPN/Bitmap-63.png" alt="Shape-5" border="0">
+                <h4 class="text-2xl p-2">Enough he perceived that it was not grass</h4>
+              </div> 
+              <div class="border border-gray rounded-lg px-3 flex flex-col space-y-3 p-4">
+                <img class="" src="https://i.ibb.co/mF8rg0r/Bitmap-64.png" alt="Shape-5" border="0">
+                 <h4 class=" text-2xl p-2">There were no blades, but only purple roots</h4>
+               </div>
+           </div>
+           </div>  
+           <div class="md:py-7 py-2 text-center">
+            <button class="px-8 py-2  uppercase font-display text-danger ">Browse all</button>
+          </div>
+       </div>
+     </section>
+
+     <!-- FOOTER -->
+
+   <section class="bg-red-dark ">
+    <div class="container mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 sm:grid-cols-1
+                  py-5 px-2">
+
+                    <div  class="px-8 text-4xl pb-16 pt-5 md:pb-1 text-white">
+                        <h1 class="text-white" >CMP</h1>
+                    </div>
+
+                    <div class="md:pl-20 pl-16">
+                        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 my-5">
+                            <div class="md:p-2 uppercase text-danger text-xl pb-8">Menu</div>
+                            <div class="md:p-2 text-gray-200 py-1">About</div>
+                            <div class="md:p-2 text-gray-200 py-1">Portfolio</div>
+                            <div class="md:p-2 text-gray-200 py-1">Service</div>
+                            <div class="md:p-2 text-gray-200  py-1">BLog</div>
+                            <div class="md:p-2 text-gray-200 py-1">Contact</div>
+                        </div>
+                    </div>
+                    <div class="md:pl-20 pl-16">
+                        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 my-5">
+                            <div class="md:p-2 uppercase text-danger text-xl pb-8">Service</div>
+                            <div class="md:p-2 py-1 text-gray-200">Consulting</div>
+                            <div class="md:p-2 py-1 text-gray-200">Planning</div>
+                            <div class="md:p-2 py-1 text-gray-200">Support</div>
+                            <div class="md:p-2 py-1 text-gray-200">Cooperation</div>
+                        </div>
+                    </div>
+                    <div class=" pl-16">
+                        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 my-5">
+                            <div class=" text-xl text-danger">Social</div>
+                            <div class="py-5">
+                              <img src="https://i.ibb.co/NmFH2f1/social-1.png" alt="social" border="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="text-red-dark" style="border: '0.5px solid #494949'"  />
+
+                <footer class=" flex md:flex-row flex-col md:py-10 lg:py-10 py-8">
+
+                    <div class="flex-1 bd-highlight px-10">
+                        <div class="leading-loose flex-grow-1 bd-highlight text-gray-lighter">
+                            Copyright © 2020. All Rights Reserved.
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row md:flex-row md:px-24 px-8 py-5 md:py-0 justify-between">
+                        <p class=" text-white tracking-tighter" >Terms of Use</p>
+                        <p class=" text-white  md:pl-10 pl-32 tracking-tighter">Privacy Policy</p>
+                    </div>
+                </footer>
+
+            </div>
+          </section>
+
+  
+
+ </body>
+</html>
